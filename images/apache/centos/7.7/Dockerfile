@@ -22,9 +22,9 @@ COPY ./conf/httpd/httpd.conf            /etc/httpd/conf/httpd.conf
 COPY ./conf/httpd/conf.modules.d/*.conf /etc/httpd/conf.modules.d/
 
 # Configure entrypoint
-COPY ./functions/apache/*.sh                  /docker-entrypoint-functions/apache/
-COPY ./functions/general/*.sh                 /docker-entrypoint-functions/general/
-COPY ./apache/centos/7.7/docker-entrypoint.sh /docker-entrypoint.sh
+COPY ./functions/apache/*.sh                         /docker-entrypoint-functions/apache/
+COPY ./functions/general/*.sh                        /docker-entrypoint-functions/general/
+COPY ./images/apache/centos/7.7/docker-entrypoint.sh /docker-entrypoint.sh
 
 RUN chmod u+x /docker-entrypoint.sh && \
     chmod u+x /docker-entrypoint-functions/apache/*.sh && \

@@ -14,13 +14,14 @@ jobs:
 
     - name: Build images
       env:
+        DOCKER_LOGIN_USERNAME: ${{ secrets.DOCKER_LOGIN_USERNAME }}
         DOCKER_LOGIN_PASSWORD: ${{ secrets.DOCKER_LOGIN_PASSWORD }}
       run: |
         docker build -t ecarocci/base:centos7.6 -f ./images/base/centos/7.6/base/Dockerfile .
         docker build -t ecarocci/base:centos7.6-ius -f ./images/base/centos/7.6/ius/Dockerfile .
         docker build -t ecarocci/base:centos7.7 -f ./images/base/centos/7.7/base/Dockerfile .
         docker build -t ecarocci/base:centos7.7-remi -f ./images/base/centos/7.7/remi/Dockerfile .
-        docker login --username ecarocci --password "$DOCKER_LOGIN_PASSWORD"
+        docker login -u "$DOCKER_LOGIN_USERNAME" -p "$DOCKER_LOGIN_PASSWORD"
         docker push ecarocci/base:centos7.6
         docker push ecarocci/base:centos7.6-ius
         docker push ecarocci/base:centos7.7

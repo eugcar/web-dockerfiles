@@ -23,11 +23,11 @@ jobs:
         docker build -t ecarocci/php-cli:7.1 -f ./images/php/7.1/php-cli/Dockerfile .
         docker build -t ecarocci/php-fpm-base:7.1 -f ./images/php/7.1/php-fpm/base/Dockerfile .
         docker build -t ecarocci/php-fpm-apache:7.1 -f ./images/php/7.1/php-fpm/apache/Dockerfile .
-        docker build -t ecarocci/php-fpm-symfony-3:7.1 -f ./images/php/7.1/php-fpm/symfony/Dockerfile .
+        docker build -t ecarocci/php-fpm-symfony-3:7.1 -f ./images/php/7.1/php-fpm/symfony-3/Dockerfile .
         docker build -t ecarocci/php-cli:7.4 -f ./images/php/7.4/php-cli/Dockerfile .
         docker build -t ecarocci/php-fpm-base:7.4 -f ./images/php/7.4/php-fpm/base/Dockerfile .
         docker build -t ecarocci/php-fpm-apache:7.4 -f ./images/php/7.4/php-fpm/apache/Dockerfile .
-        docker build -t ecarocci/php-fpm-symfony-3:7.4 -f ./images/php/7.4/php-fpm/symfony/Dockerfile .
+        docker build -t ecarocci/php-fpm-symfony-3:7.4 -f ./images/php/7.4/php-fpm/symfony-3/Dockerfile .
 
     - name: Push images
       env:

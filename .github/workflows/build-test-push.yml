@@ -20,6 +20,14 @@ jobs:
         docker build -t ecarocci/base:centos7.7-remi -f ./images/base/centos/7.7/remi/Dockerfile .
         docker build -t ecarocci/apache:centos7.6 -f ./images/apache/centos/7.6/Dockerfile .
         docker build -t ecarocci/apache:centos7.7 -f ./images/apache/centos/7.7/Dockerfile .
+        docker build -t ecarocci/php-cli:7.1 -f ./images/php/7.1/php-cli/Dockerfile .
+        docker build -t ecarocci/php-fpm-base:7.1 -f ./images/php/7.1/php-fpm/base/Dockerfile .
+        docker build -t ecarocci/php-fpm-apache:7.1 -f ./images/php/7.1/php-fpm/apache/Dockerfile .
+        docker build -t ecarocci/php-fpm-symfony-3:7.1 -f ./images/php/7.1/php-fpm/symfony/Dockerfile .
+        docker build -t ecarocci/php-cli:7.4 -f ./images/php/7.4/php-cli/Dockerfile .
+        docker build -t ecarocci/php-fpm-base:7.4 -f ./images/php/7.4/php-fpm/base/Dockerfile .
+        docker build -t ecarocci/php-fpm-apache:7.4 -f ./images/php/7.4/php-fpm/apache/Dockerfile .
+        docker build -t ecarocci/php-fpm-symfony-3:7.4 -f ./images/php/7.4/php-fpm/symfony/Dockerfile .
 
     - name: Push images
       env:
@@ -31,5 +39,13 @@ jobs:
         docker push ecarocci/base:centos7.6-ius
         docker push ecarocci/base:centos7.7
         docker push ecarocci/base:centos7.7-remi
-        docker push ecarocci/base:apache:centos7.6
-        docker push ecarocci/base:apache:centos7.7
+        docker push ecarocci/apache:centos7.6
+        docker push ecarocci/apache:centos7.7
+        docker push ecarocci/php-cli:7.1
+        docker push ecarocci/php-fpm-base:7.1
+        docker push ecarocci/php-fpm-apache:7.1
+        docker push ecarocci/php-fpm-symfony:7.1
+        docker push ecarocci/php-cli:7.4
+        docker push ecarocci/php-fpm-base:7.4
+        docker push ecarocci/php-fpm-apache:7.4
+        docker push ecarocci/php-fpm-symfony:7.4

@@ -29,6 +29,10 @@ jobs:
         docker build -t ecarocci/php-fpm-apache:7.4 -f ./images/php/7.4/php-fpm/apache/Dockerfile .
         docker build -t ecarocci/php-fpm-symfony-3:7.4 -f ./images/php/7.4/php-fpm/symfony-3/Dockerfile .
 
+    - name: Test images
+      run: |
+        ./execute-tests.sh
+
     - name: Push images
       env:
         DOCKER_LOGIN_USERNAME: ${{ secrets.DOCKER_LOGIN_USERNAME }}

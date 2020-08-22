@@ -5,7 +5,6 @@ set -o errexit  # Exit on most errors (see the manual)
 set -o pipefail # Use last non-zero exit code in a pipeline
 
 . /docker-entrypoint-functions/apache/copy-apache-configuration.sh
-. /docker-entrypoint-functions/general/add-bitbucket-to-known-hosts.sh
 . /docker-entrypoint-functions/general/create-app-user-and-group.sh
 . /docker-entrypoint-functions/general/execute-scripts.sh
 . /docker-entrypoint-functions/general/set-container-as-initialized.sh
@@ -19,7 +18,6 @@ set -o pipefail # Use last non-zero exit code in a pipeline
 initialize() {
   show_commit_hash
   create_user_and_group
-  add_bitbucket_to_known_hosts
   install_additional_php_extensions
   copy_php_configuration
   copy_php_fpm_configuration

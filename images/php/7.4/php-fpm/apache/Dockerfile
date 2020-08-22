@@ -19,7 +19,6 @@ RUN rm -rf /etc/httpd/conf.d/autoindex.conf && \
 
 # Copy configuration
 COPY ./conf/httpd/httpd.conf            /etc/httpd/conf/httpd.conf
-COPY ./conf/httpd/conf.d/*.conf         /etc/httpd/conf.d/
 COPY ./conf/httpd/conf.modules.d/*.conf /etc/httpd/conf.modules.d/
 
 # Configure entrypoint

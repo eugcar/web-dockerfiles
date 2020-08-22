@@ -44,8 +44,8 @@ jobs:
         docker push ecarocci/php-cli:7.1
         docker push ecarocci/php-fpm-base:7.1
         docker push ecarocci/php-fpm-apache:7.1
-        docker push ecarocci/php-fpm-symfony:7.1
+        docker push ecarocci/php-fpm-symfony-3:7.1
         docker push ecarocci/php-cli:7.4
         docker push ecarocci/php-fpm-base:7.4
         docker push ecarocci/php-fpm-apache:7.4
-        docker push ecarocci/php-fpm-symfony:7.4
+        docker push ecarocci/php-fpm-symfony-3:7.4
